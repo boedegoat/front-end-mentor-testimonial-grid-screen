@@ -20,15 +20,64 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: var(--gray-1);
 }
 
 .container {
   display: grid;
   max-width: 1110px;
-  gap: 1rem;
+  gap: 1.5rem;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
     'card-1 card-1 card-2 card-3'
     'card-5 card-4 card-4 card-3';
+}
+
+.card {
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  gap: 1rem;
+}
+.card:nth-child(1) {
+  grid-area: card-1;
+  background: var(--violet);
+}
+.card:nth-child(2) {
+  grid-area: card-2;
+  background: var(--gray-3);
+}
+.card:nth-child(3) {
+  grid-area: card-3;
+}
+.card:nth-child(4) {
+  grid-area: card-4;
+  background: var(--dark);
+}
+.card:nth-child(5) {
+  grid-area: card-5;
+}
+.card.dark {
+  color: var(--white);
+}
+.card.light {
+  color: var(--dark);
+  background: var(--white);
+}
+
+.card__profile {
+  display: flex;
+}
+
+.card__header {
+  font-size: 1.1rem;
+}
+
+.card__subtitle {
+  font-size: 13px;
+  line-height: 1.6em;
 }
