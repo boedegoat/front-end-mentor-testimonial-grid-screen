@@ -45,7 +45,10 @@ body {
 }
 .card:nth-child(1) {
   grid-area: card-1;
-  background: var(--violet);
+  background-color: var(--violet);
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right 15%;
 }
 .card:nth-child(2) {
   grid-area: card-2;
@@ -71,13 +74,24 @@ body {
 
 .card__profile {
   display: flex;
+  font-size: 14px;
+}
+.card__profile-name {
+  font-weight: 500;
+  line-height: 1.5em;
+}
+.card__profile-status {
+  font-weight: normal;
+  opacity: 0.5;
 }
 
 .card__header {
-  font-size: 1.1rem;
+  font-size: 1.26rem;
+  font-weight: 600;
 }
 
 .card__subtitle {
   font-size: 13px;
   line-height: 1.6em;
+  opacity: 0.7;
 }
