@@ -29,7 +29,7 @@ body {
   margin: 1rem;
   gap: 1.5rem;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: auto;
   grid-template-areas:
     'card-1 card-1 card-2 card-3'
     'card-5 card-4 card-4 card-3';
@@ -102,4 +102,27 @@ body {
   font-size: 13px;
   line-height: 1.6em;
   opacity: 0.7;
+}
+
+@media (max-width: 960px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'card-1 card-1'
+      'card-2 card-3'
+      'card-5 card-3'
+      'card-4 card-4';
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'card-1'
+      'card-2'
+      'card-3'
+      'card-4'
+      'card-5';
+  }
 }
